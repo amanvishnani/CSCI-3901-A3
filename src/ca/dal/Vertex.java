@@ -53,4 +53,9 @@ public class Vertex {
         setY(y);
         setEdges(new HashSet<>());
     }
+
+    @Override
+    public String toString() {
+        return String.format("%d\t%d", getX(), getY());
+    }
 }
