@@ -3,6 +3,8 @@ package ca.dal;
 import java.util.*;
 
 /**
+ * Class representing HalifaxMap Graph having a set of vertices and edges.
+ *
  * @author Aman Vishnani (aman.vishnani@dal.ca) [CSID: vishnani]
  */
 public class HalifaxMap {
@@ -109,7 +111,15 @@ public class HalifaxMap {
         return getRefVertex(v);
     }
 
-    void navigate( int x1, int y1, int x2, int y2 ) {
+    /**
+     * Searches for path between two intersections.
+     * Prints path from one intersection to other if exists.
+     * @param x1 the coordinate x for source vertex.
+     * @param y1 the coordinate y for source vertex.
+     * @param x2 the coordinate x for destination vertex.
+     * @param y2 the coordinate y for destination vertex.
+     */
+    public void navigate( int x1, int y1, int x2, int y2 ) {
         Vertex source = getRefVertex(x1,y1);
         Vertex dest = getRefVertex(x2,y2);
         if(source == null) {

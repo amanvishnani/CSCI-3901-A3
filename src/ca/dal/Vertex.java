@@ -5,6 +5,8 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
+ * Vertex of the HalifaxMap graph representing an intersection n the graph.
+ * Each vertex as x and y coordinates.
  * @author Aman Vishnani (aman.vishnani@dal.ca) [CSID: vishnani]
  */
 public class Vertex {
@@ -57,6 +59,10 @@ public class Vertex {
         setEdges(new HashSet<>());
     }
 
+    /**
+     * Method to print tab separated coordinates of a vertex for output.
+     * @return the string with tab-separated x and y coordinates.
+     */
     @Override
     public String toString() {
         return String.format("%d\t%d", getX(), getY());

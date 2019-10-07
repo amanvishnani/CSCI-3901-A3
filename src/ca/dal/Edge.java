@@ -1,11 +1,14 @@
 package ca.dal;
 
 /**
+ * Edge Class, representing an edge between two vertex in HalifaxMap Graph.
  * @author Aman Vishnani (aman.vishnani@dal.ca) [CSID: vishnani]
  */
 public class Edge {
     private Vertex vertex1;
     private Vertex vertex2;
+
+    private Double weight;
 
     public Vertex getVertex1() {
         return vertex1;
@@ -33,9 +36,12 @@ public class Edge {
      * @return the weight/distance of edge.
      */
     public Double weight() {
-        Double x = Math.pow(vertex1.getX() - vertex2.getX(), 2);
-        Double y = Math.pow(vertex1.getY() - vertex2.getY(), 2);
-        return Math.sqrt(x+y);
+        if(weight == null) {
+            Double x = Math.pow(vertex1.getX() - vertex2.getX(), 2);
+            Double y = Math.pow(vertex1.getY() - vertex2.getY(), 2);
+            weight = Math.sqrt(x+y);
+        }
+        return weight;
     }
 
     /**
