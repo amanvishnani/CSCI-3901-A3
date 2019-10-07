@@ -129,6 +129,10 @@ public class HalifaxMap {
             System.out.println("Destination vertex not found.");
             return;
         }
+        if(source.equals(dest)) {
+            System.out.println(source);
+            return;
+        }
         // Initializing variables for Dijkstra's Algorithm.
         Map<Vertex, Vertex> previous = new HashMap<>();
         Map<Vertex, Double> distance = new HashMap<>();
