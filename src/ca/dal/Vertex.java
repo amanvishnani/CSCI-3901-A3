@@ -4,6 +4,9 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ * @author Aman Vishnani (aman.vishnani@dal.ca) [CSID: vishnani]
+ */
 public class Vertex {
     private int x;
     private int y;
